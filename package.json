@@ -1,0 +1,8 @@
+{
+  "name": "pinterest-large-image-layout",
+  "version": "0.1.2",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}

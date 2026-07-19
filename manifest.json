@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Pinterest 大图布局",
+  "version": "0.1.2",
+  "description": "控制 Pinterest 瀑布流列数，让图片在宽屏上以更大尺寸展示。",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Pinterest 列数控制",
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.pinterest.com/*"],
+      "js": ["src/content/layout.js", "src/content/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
