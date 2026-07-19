@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pinterest 大图布局</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="header">
+        <div class="brand" aria-hidden="true">P</div>
+        <div>
+          <h1>Pinterest 大图布局</h1>
+          <p>让宽屏上的图片更醒目</p>
+        </div>
+        <label class="switch">
+          <input id="enabled" type="checkbox" aria-label="启用扩展" />
+          <span class="switch-track"></span>
+        </label>
+      </header>
+
+      <section class="settings" aria-labelledby="columns-label">
+        <div class="section-heading">
+          <h2 id="columns-label">每行列数</h2>
+          <output id="selection">3 列</output>
+        </div>
+        <div class="column-options" role="group" aria-label="选择 Pinterest 图片列数">
+          <button type="button" data-columns="0">自动</button>
+          <button type="button" data-columns="2">2</button>
+          <button type="button" data-columns="3">3</button>
+          <button type="button" data-columns="4">4</button>
+          <button type="button" data-columns="5">5</button>
+          <button type="button" data-columns="6">6</button>
+        </div>
+      </section>
+
+      <p id="status" class="status">打开或刷新 Pinterest 后自动应用</p>
+    </main>
+
+    <script src="../content/layout.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
